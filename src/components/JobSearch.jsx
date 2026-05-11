@@ -31,12 +31,7 @@ export default function JobSearch({ settings }) {
 
     try {
       setProgress({ step: 'Fetching jobs from Arbeitsagentur, Adzuna & LinkedIn...', current: 0, total: 0 })
-      const rawJobs = await searchJobs(
-        q, location,
-        settings.adzunaAppId,
-        settings.adzunaAppKey,
-        settings.apifyToken
-      )
+      const rawJobs = await searchJobs(q)
 
       setProgress({ step: `Scoring ${rawJobs.length} jobs against your resume...`, current: 0, total: rawJobs.length })
 

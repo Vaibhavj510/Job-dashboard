@@ -61,28 +61,12 @@ export default function Settings() {
         />
 
         <Field
-          label="ADZUNA APP ID"
-          field="adzunaAppId"
-          placeholder="xxxxxxxx"
-          show={showAdzunaId}
-          onToggleShow={setShowAdzunaId}
-          hint="Get free from developer.adzuna.com → My Apps. Searches 300+ German job boards."
-        />
-        <Field
-          label="ADZUNA APP KEY"
-          field="adzunaAppKey"
-          placeholder="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-          show={showAdzunaKey}
-          onToggleShow={setShowAdzunaKey}
-          hint="From same Adzuna dashboard. Optional — Arbeitsagentur works without any key."
-        />
-        <Field
-          label="APIFY TOKEN (optional — LinkedIn backup)"
-          field="apifyToken"
-          placeholder="apify_api_..."
-          show={showApify}
-          onToggleShow={setShowApify}
-          hint="From apify.com → Settings → Integrations. Used as third source alongside Adzuna & Arbeitsagentur."
+          label="ANTHROPIC API KEY (optional — overrides server key)"
+          field="anthropicKey"
+          placeholder="sk-ant-api03-..."
+          show={showAnthropic}
+          onToggleShow={setShowAnthropic}
+          hint="Only needed if running locally. On Vercel, the key is configured server-side in Vercel dashboard."
         />
       </div>
 
